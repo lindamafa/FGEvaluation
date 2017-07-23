@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCountCalculator", "WordCountCalculator\WordCountCalculator.csproj", "{2C2D7BB9-B443-4917-8D49-ED2FBCF2A467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{22CD7688-9129-43DB-B816-C02FCAC8FFA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCountCalculator.Tests", "WordCountCalculator.Tests\WordCountCalculator.Tests.csproj", "{25BEF4F4-D9BF-4459-AF89-2888BF16D510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnualTaxCalculator", "AnnualTaxCalculator\AnnualTaxCalculator.csproj", "{7B079ABF-387A-4E35-BF3B-862BFF27B197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnualTaxCalculator.Tests", "AnnualTaxCalculator.Tests\AnnualTaxCalculator.Tests.csproj", "{23CC276B-14FE-465A-BE44-24DD66F884E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C2D7BB9-B443-4917-8D49-ED2FBCF2A467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2D7BB9-B443-4917-8D49-ED2FBCF2A467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2D7BB9-B443-4917-8D49-ED2FBCF2A467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2D7BB9-B443-4917-8D49-ED2FBCF2A467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BEF4F4-D9BF-4459-AF89-2888BF16D510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BEF4F4-D9BF-4459-AF89-2888BF16D510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BEF4F4-D9BF-4459-AF89-2888BF16D510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BEF4F4-D9BF-4459-AF89-2888BF16D510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B079ABF-387A-4E35-BF3B-862BFF27B197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B079ABF-387A-4E35-BF3B-862BFF27B197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B079ABF-387A-4E35-BF3B-862BFF27B197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B079ABF-387A-4E35-BF3B-862BFF27B197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F5F7CCC-F1E7-46C6-8AE2-54C5F46D5221} = {22CD7688-9129-43DB-B816-C02FCAC8FFA2}
+	EndGlobalSection
+EndGlobal
