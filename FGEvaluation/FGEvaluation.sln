@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnualTaxCalculator", "Annu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnualTaxCalculator.Tests", "AnnualTaxCalculator.Tests\AnnualTaxCalculator.Tests.csproj", "{23CC276B-14FE-465A-BE44-24DD66F884E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MersennePrimeCalculator", "MersennePrimeCalculator\MersennePrimeCalculator.csproj", "{A49C2085-2DAB-4256-B4A4-E1C0A76A2BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MersennePrimeCalculator.Tests", "MersennePrimeCalculator.Tests\MersennePrimeCalculator.Tests.csproj", "{DF2C2E04-86FE-467C-9B49-EB228E33C8B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23CC276B-14FE-465A-BE44-24DD66F884E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A49C2085-2DAB-4256-B4A4-E1C0A76A2BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49C2085-2DAB-4256-B4A4-E1C0A76A2BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49C2085-2DAB-4256-B4A4-E1C0A76A2BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49C2085-2DAB-4256-B4A4-E1C0A76A2BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2C2E04-86FE-467C-9B49-EB228E33C8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2C2E04-86FE-467C-9B49-EB228E33C8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2C2E04-86FE-467C-9B49-EB228E33C8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2C2E04-86FE-467C-9B49-EB228E33C8B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,4 @@
-﻿using System.Resources;
-using AnnualTaxCalculator.BLL;
-using AnnualTaxCalculator.Models;
+﻿using AnnualTaxCalculator.BLL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AnnualTaxCalculator.Tests
@@ -12,7 +10,6 @@ namespace AnnualTaxCalculator.Tests
         //public void Construct_ShouldNotBeNull()
         //{
         //    //---Setup----------------------------------------------
-
         //    //---Execute--------------------------------------------
         //    var annualTaxCalculator = new AnnualTaxCalculator();
         //    //---Assert---------------------------------------------
@@ -44,41 +41,103 @@ namespace AnnualTaxCalculator.Tests
         //}
 
         [TestMethod]
-        public void Calculate_GivenAgeAndAnnualSalary_ShouldReturnAnnualTax()
+        public void Calculate_GivenAge30AndAnnualSalary300000_ShouldReturnAnnualTax()
         {
             //---Setup----------------------------------------------
-            double annualSalary = 300000;
+            decimal annualSalary = 300000m;
+            decimal monthlySalary = annualSalary / 12;
             int age = 30;
             var taxReliefCalculator = new TaxReliefCalculator(age);
             var ageBasedRelief = taxReliefCalculator.Calculate();
-            var annualTaxCalculator = new AnnualTaxCalculator(ageBasedRelief, annualSalary);
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
             //---Execute--------------------------------------------
             decimal annualTax = annualTaxCalculator.Calculate();
             //---Assert---------------------------------------------
-            Assert.AreEqual(300, annualTax);
+            Assert.AreEqual(24840, annualTax);
+        }
+
+        [TestMethod]
+        public void Calculate_GivenAge55AndAnnualSalary300000_ShouldReturnAnnualTax()
+        {
+            //---Setup----------------------------------------------
+            decimal annualSalary = 300000m;
+            decimal monthlySalary = annualSalary / 12;
+            int age = 55;
+            var taxReliefCalculator = new TaxReliefCalculator(age);
+            var ageBasedRelief = taxReliefCalculator.Calculate();
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
+            //---Execute--------------------------------------------
+            decimal annualTax = annualTaxCalculator.Calculate();
+            //---Assert---------------------------------------------
+            Assert.AreEqual(18360, annualTax);
+        }
+
+        [TestMethod]
+        public void Calculate_GivenAge30AndAnnualSalary48000_ShouldReturnAnnualTax()
+        {
+            //---Setup----------------------------------------------
+            decimal annualSalary = 48000m;
+            decimal monthlySalary = annualSalary / 12;
+            int age = 30;
+            var taxReliefCalculator = new TaxReliefCalculator(age);
+            var ageBasedRelief = taxReliefCalculator.Calculate();
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
+            //---Execute--------------------------------------------
+            decimal annualTax = annualTaxCalculator.Calculate();
+            //---Assert---------------------------------------------
+            Assert.AreEqual(0, annualTax);
+        }
+
+        [TestMethod]
+        public void Calculate_GivenAge55AndAnnualSalary48000_ShouldReturnAnnualTax()
+        {
+            //---Setup----------------------------------------------
+            decimal annualSalary = 48000m;
+            decimal monthlySalary = annualSalary / 12;
+            int age = 55;
+            var taxReliefCalculator = new TaxReliefCalculator(age);
+            var ageBasedRelief = taxReliefCalculator.Calculate();
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
+            //---Execute--------------------------------------------
+            decimal annualTax = annualTaxCalculator.Calculate();
+            //---Assert---------------------------------------------
+            Assert.AreEqual(0, annualTax);
+        }
+
+
+        [TestMethod]
+        public void Calculate_GivenAge30AndAnnualSalary900000_ShouldReturnAnnualTax()
+        {
+            //---Setup----------------------------------------------
+            decimal annualSalary = 900000m;
+            decimal monthlySalary = annualSalary / 12;
+            int age = 30;
+            var taxReliefCalculator = new TaxReliefCalculator(age);
+            var ageBasedRelief = taxReliefCalculator.Calculate();
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
+            //---Execute--------------------------------------------
+            decimal annualTax = annualTaxCalculator.Calculate();
+            //---Assert---------------------------------------------
+            Assert.AreEqual(262800, annualTax);
+        }
+
+
+        [TestMethod]
+        public void Calculate_GivenAge55AndAnnualSalary900000_ShouldReturnAnnualTax()
+        {
+            //---Setup----------------------------------------------
+            decimal annualSalary = 900000m;
+            decimal monthlySalary = annualSalary / 12;
+            int age = 55;
+            var taxReliefCalculator = new TaxReliefCalculator(age);
+            var ageBasedRelief = taxReliefCalculator.Calculate();
+            var annualTaxCalculator = new BLL.AnnualTaxCalculator(ageBasedRelief, monthlySalary);
+            //---Execute--------------------------------------------
+            decimal annualTax = annualTaxCalculator.Calculate();
+            //---Assert---------------------------------------------
+            Assert.AreEqual(214200, annualTax);
         }
     }
 
-    public class AnnualTaxCalculator
-    {
-        private readonly AgeBasedRelief _ageBasedRelief;
-        private double _annualSalary;
-        public AnnualTaxCalculator(AgeBasedRelief ageBasedRelief, double annualSalary)
-        {
-            _ageBasedRelief = ageBasedRelief;
-            _annualSalary = annualSalary;
-        }
-
-        public decimal Calculate()
-        {
-            var monthlySalary = GetMonthlySalary();
-            return default(decimal);
-            //return (monthlySalary - _ageBasedRelief.MonthlySalaryRelief) * _ageBasedRelief.PercentageOfDeduction;
-        }
-
-        private double GetMonthlySalary()
-        {
-            return _annualSalary / 12;
-        }
-    }
 }
+

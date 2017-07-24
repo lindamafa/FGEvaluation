@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AnnualTaxCalculator.Models;
+using AnnualTaxCalculator.Views;
 
 namespace AnnualTaxCalculator
 {
@@ -16,7 +18,10 @@ namespace AnnualTaxCalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+
+            var person = new Person { DateOfBirth = DateTime.Now };
+            var viewModel = new MainFormViewModel(person);
+            Application.Run(new FrmMain(viewModel));
         }
     }
 }

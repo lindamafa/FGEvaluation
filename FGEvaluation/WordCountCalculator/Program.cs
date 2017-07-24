@@ -24,14 +24,12 @@ namespace WordCountCalculator
             }
 
             Dictionary<string, int> dict = new Dictionary<string, int>();
-
-            //StringBuilder builder = new StringBuilder();
+         
             using (StreamReader reader = new StreamReader(filePath))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    //builder.AppendLine(line);
                     var words = line.ToLower().Split(new[] { ',', '.', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                     for (int i = 0; i < words.Length; i++)
@@ -56,11 +54,6 @@ namespace WordCountCalculator
             }
 
             logger.ReadLine();
-            // var textInput = builder.ToString();
-
-            //Split the words
-            //var words2 = textInput.Split(new [] {',', '.', ' '}, StringSplitOptions.RemoveEmptyEntries);
-
 
         }
 
